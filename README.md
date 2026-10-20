@@ -89,6 +89,7 @@ Para Baixar o docker do CTFd
 cd /home/kali/ctfd-escola-ptbr
 docker compose up -d --build
 ```
+---
 
 ```bash
 cd vulnflags_lab
