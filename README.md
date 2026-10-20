@@ -84,6 +84,12 @@ docker compose version
 
 Clone ou baixe o repositório e entre na pasta do projeto:
 
+Para Baixar o docker do CTFd
+```bash
+cd /home/kali/ctfd-escola-ptbr
+docker compose up -d --build
+```
+
 ```bash
 cd vulnflags_lab
 ```
