@@ -80,6 +80,27 @@ docker --version
 docker compose version
 ```
 
+Baixando o Docker no WSL
+```
+apt update
+apt install -y ca-certificates curl
+```
+Adicione o repositório oficial do Docker:
+```
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+chmod a+r /etc/apt/keyrings/docker.asc
+```
+Agora configure o repositório:
+```
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "$VERSION_CODENAME") stable" > /etc/apt/sources.list.d/docker.list
+```
+Instale os componentes do Docker, incluindo o Compose:
+```
+apt install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+
 ### Iniciar o laboratório
 
 Clone ou baixe o repositório e entre na pasta do projeto:
